@@ -18,6 +18,21 @@ function rpcCall(to, data) {
 }
 const fmt = (n) => n.toLocaleString("en-US");
 const fmtT = (wei) => fmt(wei / 10n ** 18n);
+let unitsShown = null;
+function tweenUnits(to) {
+  const el = document.getElementById("bUnits");
+  if (!el) return;
+  const target = Number(to);
+  const from = unitsShown === null ? target : unitsShown;
+  unitsShown = target;
+  if (from === target) { el.textContent = fmt(to); return; }
+  const t0 = performance.now(), dur = 650;
+  (function step(now) {
+    const p = Math.min(1, (now - t0) / dur);
+    el.textContent = fmt(BigInt(Math.round(from + (target - from) * p)));
+    if (p < 1) requestAnimationFrame(step);
+  })(t0);
+}
 async function board() {
   try {
     const [units, epoch, rate, free, pool, open] = await Promise.all([
@@ -25,13 +40,10 @@ async function board() {
       rpcCall(CONFIG.mint, SEL.rateNow), rpcCall(CONFIG.mint, SEL.freeRate),
       rpcCall(CONFIG.mint, SEL.pool), rpcCall(CONFIG.mint, SEL.open)
     ]);
-    if (open === 1n) {
-      const pill = document.getElementById("cdPill");
-      const pt = document.getElementById("cdPillT");
-      if (pill) pill.classList.add("live");
-      if (pt) pt.textContent = "MINT IS LIVE";
-    }
-    document.getElementById("bUnits").textContent = fmt(units);
+    window.CT = { rate: Number(rate), free: Number(free), units: Number(units) };
+    document.dispatchEvent(new Event("ct:board"));
+    tweenUnits(units);
+    document.getElementById("bUnits").dataset.v = units.toString();
     document.getElementById("bEpoch").textContent = (epoch + 1n).toString() + " / 11";
     document.getElementById("bRate").textContent = fmt(rate) + " TRIS";
     document.getElementById("bFree").textContent = fmt(free) + " TRIS";
@@ -42,6 +54,7 @@ async function board() {
   } catch (e) { /* board tetap pada nilai awal */ }
 }
 board();
+setInterval(board, 60000);
 async function scores() {
   try {
     const r = await fetch("/leaderboard.json", { cache: "no-store" });
@@ -72,25 +85,27 @@ async function live() {
       return;
     }
     const short = (a) => a.slice(0, 6) + "…" + a.slice(-4);
-    box.innerHTML = feed.slice(0, 12).map(function (e) {
+    box.innerHTML = feed.slice(0, 12).map(function (e, i) {
       const time = new Date(e.ts * 1000).toISOString().slice(11, 19);
       const kind = e.kind === "free"
         ? '<span class="lk-free">' + (zh ? "免费掉落" : "FREE DROP") + " ×" + e.units + "</span>"
         : '<span class="lk-paid">' + (zh ? "锁定掉落" : "LOCK DROP") + " ×" + e.units + "</span>";
-      return '<div class="liverow"><span class="lt">' + time + ' UTC</span><span class="lw">' + short(e.wallet) + "</span>" + kind + '<span class="ltr">+' + Number(e.tris).toLocaleString("en-US") + " TRIS</span></div>";
+      return '<div class="liverow" style="animation-delay:' + i * 55 + 'ms"><span class="lt">' + time + ' UTC</span><span class="lw">' + short(e.wallet) + "</span>" + kind + '<span class="ltr">+' + Number(e.tris).toLocaleString("en-US") + " TRIS</span></div>";
     }).join("");
   } catch (e) { /* feed tetap pada keadaan awal */ }
 }
 live();
-setInterval(live, 45000);
-const OPEN_AT = Date.UTC(2026, 10, 5, 11, 0, 0);
-function tick() {
-  const h = document.getElementById("cdH"), m = document.getElementById("cdM"), s = document.getElementById("cdS");
-  if (!h) return;
-  let d = Math.max(0, OPEN_AT - Date.now());
-  h.textContent = String(Math.floor(d / 3600000)).padStart(2, "0");
-  m.textContent = String(Math.floor(d % 3600000 / 60000)).padStart(2, "0");
-  s.textContent = String(Math.floor(d % 60000 / 1000)).padStart(2, "0");
+setInterval(live, 30000);
+function calc() {
+  const slider = document.getElementById("calcUnits");
+  if (!slider) return;
+  const q = Number(slider.value);
+  const rate = (window.CT && window.CT.rate) || 20000;
+  document.getElementById("calcQ").textContent = q;
+  document.getElementById("calcLock").textContent = (q * 0.002).toFixed(3) + " BNB";
+  document.getElementById("calcReward").textContent = (q * rate).toLocaleString("en-US") + " TRIS";
+  document.getElementById("calcFee").textContent = "±$" + (q * 0.09).toFixed(2);
 }
-tick();
-setInterval(tick, 1000);
+const calcSlider = document.getElementById("calcUnits");
+if (calcSlider) { calcSlider.addEventListener("input", calc); calc(); }
+document.addEventListener("ct:board", calc);
