@@ -59,6 +59,30 @@ async function scores() {
   } catch (e) { /* papan tetap pada keadaan awal */ }
 }
 scores();
+async function live() {
+  try {
+    const r = await fetch("/livemints.json", { cache: "no-store" });
+    const j = await r.json();
+    const box = document.getElementById("liveRows");
+    if (!box) return;
+    const zh = document.body.classList.contains("lang-zh");
+    const feed = (j && j.feed) || [];
+    if (!feed.length) {
+      box.innerHTML = '<div class="emptyblock">' + (zh ? "暂无掉落 · 首批方块将在开启时落地" : "NO DROPS YET · FIRST BLOCKS LAND AT LAUNCH") + "</div>";
+      return;
+    }
+    const short = (a) => a.slice(0, 6) + "…" + a.slice(-4);
+    box.innerHTML = feed.slice(0, 12).map(function (e) {
+      const time = new Date(e.ts * 1000).toISOString().slice(11, 19);
+      const kind = e.kind === "free"
+        ? '<span class="lk-free">' + (zh ? "免费掉落" : "FREE DROP") + " ×" + e.units + "</span>"
+        : '<span class="lk-paid">' + (zh ? "锁定掉落" : "LOCK DROP") + " ×" + e.units + "</span>";
+      return '<div class="liverow"><span class="lt">' + time + ' UTC</span><span class="lw">' + short(e.wallet) + "</span>" + kind + '<span class="ltr">+' + Number(e.tris).toLocaleString("en-US") + " TRIS</span></div>";
+    }).join("");
+  } catch (e) { /* feed tetap pada keadaan awal */ }
+}
+live();
+setInterval(live, 45000);
 const OPEN_AT = Date.UTC(2026, 10, 5, 11, 0, 0);
 function tick() {
   const h = document.getElementById("cdH"), m = document.getElementById("cdM"), s = document.getElementById("cdS");
