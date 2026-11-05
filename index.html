@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Cointris: free daily TRIS mints and BNB lock mints that refund in full after 24 hours.">
 <meta name="twitter:image" content="https://cointris.xyz/og.png">
 <link rel="icon" href="/favicon.svg?v=1" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css?v=6">
+<link rel="stylesheet" href="/style.css?v=7">
 </head>
 <body class="lang-en">
 <div class="strip"><span class="en">MINT IS LIVE · FREE DROP DAILY · BNB LOCKS RETURN 100%</span><span class="zh">铸造已开启 · 每日免费掉落 · BNB 锁定 100% 返还</span></div>
@@ -38,11 +38,12 @@
 <button class="langbtn" id="langBtn" onclick="ctLang(document.body.classList.contains('lang-zh') ? 'en' : 'zh')">中文</button>
 </div></header>
 
-<div class="hero"><div class="fall"><div class="col" style="left:6%;animation-duration:7s;animation-delay:0s"><i style="background:#22d3ee"></i><i style="background:#22d3ee;opacity:.55"></i></div><div class="col" style="left:22%;animation-duration:9s;animation-delay:1.4s"><i style="background:#facc15"></i><i style="background:#facc15;opacity:.55"></i></div><div class="col" style="left:46%;animation-duration:8s;animation-delay:0.6s"><i style="background:#a78bfa"></i><i style="background:#a78bfa;opacity:.55"></i></div><div class="col" style="left:68%;animation-duration:10s;animation-delay:2.1s"><i style="background:#4ade80"></i><i style="background:#4ade80;opacity:.55"></i></div><div class="col" style="left:86%;animation-duration:7.5s;animation-delay:1s"><i style="background:#f87171"></i><i style="background:#f87171;opacity:.55"></i></div><div class="col" style="left:94%;animation-duration:9.5s;animation-delay:2.8s"><i style="background:#60a5fa"></i><i style="background:#60a5fa;opacity:.55"></i></div></div><div class="wrap hero-in">
+<div class="hero"><div class="fall"><div class="col" style="left:6%;animation-duration:7s;animation-delay:0s"><i style="background:#22d3ee"></i><i style="background:#22d3ee;opacity:.55"></i></div><div class="col" style="left:22%;animation-duration:9s;animation-delay:1.4s"><i style="background:#facc15"></i><i style="background:#facc15;opacity:.55"></i></div><div class="col" style="left:46%;animation-duration:8s;animation-delay:0.6s"><i style="background:#a78bfa"></i><i style="background:#a78bfa;opacity:.55"></i></div><div class="col" style="left:68%;animation-duration:10s;animation-delay:2.1s"><i style="background:#4ade80"></i><i style="background:#4ade80;opacity:.55"></i></div><div class="col" style="left:86%;animation-duration:7.5s;animation-delay:1s"><i style="background:#f87171"></i><i style="background:#f87171;opacity:.55"></i></div><div class="col" style="left:94%;animation-duration:9.5s;animation-delay:2.8s"><i style="background:#60a5fa"></i><i style="background:#60a5fa;opacity:.55"></i></div></div><canvas id="fx" aria-hidden="true"></canvas><div class="wrap hero-in">
 <div class="kicker"><span class="en">TRIS MINING ON BNB CHAIN · AGENT-ONLY</span><span class="zh">BNB 链上的 TRIS 挖矿 · 仅限代理</span></div>
 <h1><span class="en">Blocks drop.<br><span class="c1">Coins</span> <span class="c2">stack.</span><br><span class="c3">BNB comes back.</span></span><span class="zh">方块掉落。<br><span class="c1">代币</span><span class="c2">堆叠。</span><br><span class="c3">BNB 全额返还。</span></span></h1>
 <p class="sub"><span class="en">Two ways to mint TRIS through your own agent. Drop one free block every day, or lock 0.002 BNB per block for the heavy drops and claim every wei back after 24 hours, rewards included. A small fixed service fee is the only part that never comes back, stated up front.</span><span class="zh">通过你自己的代理铸造 TRIS 的两种方式。每天免费掉落一个方块，或每个方块锁定 0.002 BNB 获得大额掉落，24 小时后连同奖励取回每一 wei。唯一不返还的是一笔小额固定服务费，事先明确说明。</span></p>
 <div class="stack"><i style="background:#22d3ee;height:38px"></i><i style="background:#22d3ee;height:52px"></i><i style="background:#facc15;height:30px"></i><i style="background:#a78bfa;height:58px"></i><i style="background:#facc15;height:44px"></i><i style="background:#4ade80;height:62px"></i><i style="background:#f87171;height:36px"></i><i style="background:#60a5fa;height:50px"></i><i style="background:#4ade80;height:28px"></i><i style="background:#fb923c;height:56px"></i><i style="background:#a78bfa;height:42px"></i><i style="background:#22d3ee;height:48px"></i></div>
+<div class="herohint"><span class="en">TAP THE SKY · BLOCKS DROP</span><span class="zh">轻点天空 · 方块落下</span><span id="stackCount"></span></div>
 <div class="board"><h3><span class="en">LIVE BOARD · READ FROM THE CONTRACT</span><span class="zh">实时看板 · 直接读取合约</span></h3>
 <div class="grid">
 <div class="cell"><div class="k"><span class="en">UNITS MINTED</span><span class="zh">已铸造单位</span></div><div class="v" id="bUnits">0</div></div>
@@ -172,4 +173,4 @@
 <script src="/js/lang.js?v=2"></script>
 </body>
 </html>
-<script src="/js/app.js?v=5"></script>
+<script src="/js/app.js?v=6"></script>
