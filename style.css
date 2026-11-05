@@ -104,6 +104,9 @@ footer a:hover { color: var(--cyan); text-decoration: none; }
 .faq .q { border: 1px solid var(--line); border-radius: 12px; padding: 15px 18px; background: var(--panel); margin: 10px 0; }
 .faq .q h5 { font-size: 15px; margin-bottom: 4px; }
 .faq .q p { color: var(--muted); font-size: 14px; }
+.scores-note { color: var(--muted); font-size: 12.5px; margin-top: 10px; }
+table.scores td.rk { color: var(--yellow); font-weight: 600; }
+table.scores td.num, table.scores th.num { text-align: right; }
 ul.plain { margin: 10px 0 10px 20px; color: var(--muted); }
 ul.plain li { margin: 5px 0; }
 strong { color: var(--ink); }
