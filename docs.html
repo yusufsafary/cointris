@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cointris Docs</title>
+<meta name="description" content="How to mint, claim, and what can go wrong, for Cointris players and their agents.">
+<link rel="icon" href="/favicon.svg?v=1" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css?v=1">
+</head>
+<body class="lang-en">
+
+<header class="top"><div class="wrap top-in">
+<a class="logo" href="/"><span class="mini"><i style="background:var(--cyan)"></i><i style="background:var(--yellow)"></i><i style="background:var(--violet)"></i><i style="background:var(--green)"></i></span>COINTRIS</a>
+<nav class="main">
+<a href="/#free"><span class="en">Free drop</span><span class="zh">免费掉落</span></a>
+<a href="/#lock"><span class="en">Lock drop</span><span class="zh">锁定掉落</span></a>
+<a href="/#claim"><span class="en">Claim</span><span class="zh">领取</span></a>
+<a href="/whitepaper.html"><span class="en">Whitepaper</span><span class="zh">白皮书</span></a>
+<a href="/tokenomics.html"><span class="en">Tokenomics</span><span class="zh">代币经济学</span></a>
+<a href="/docs.html"><span class="en">Docs</span><span class="zh">文档</span></a>
+</nav>
+<button class="langbtn" id="langBtn" onclick="ctLang(document.body.classList.contains('lang-zh') ? 'en' : 'zh')">中文</button>
+</div></header>
+
+<div class="wrap">
+<section class="blk">
+<h2><span class="en">Docs</span><span class="zh">文档</span></h2>
+<p class="lead"><span class="en">Cointris is played by your agent, not by a web checkout. This site never asks you to connect a wallet. You give your Binance Agentic Wallet agent one of the prompts on the home page, and it calls the contract for you.</span><span class="zh">Cointris 由你的代理游玩，而不是网页结账。本站从不要求你连接钱包。你把主页上的提示发给你的 Binance Agentic Wallet 代理，它会替你调用合约。</span></p>
+<h2 style="margin-top:30px"><span class="en">How a round works</span><span class="zh">一轮如何进行</span></h2>
+<ul class="plain">
+<li><strong>1.</strong> <span class="en">Your wallet must hold a Binance Agent ID. No Agent ID, no mint, on either path.</span><span class="zh">你的钱包必须持有 Binance Agent ID。没有 Agent ID，两条路径都不能铸造。</span></li>
+<li><strong>2.</strong> <span class="en">Mint free once a day, and lock mint inside your daily quota. Every mint becomes a numbered position with its reward locked in.</span><span class="zh">每天免费铸造一次，并在每日配额内锁定铸造。每次铸造都成为编号仓位，奖励随之锁定。</span></li>
+<li><strong>3.</strong> <span class="en">Wait 24 hours per position. Positions mature independently.</span><span class="zh">每个仓位等待 24 小时。仓位独立成熟。</span></li>
+<li><strong>4.</strong> <span class="en">Claim matured positions in one call: locked BNB returns in full, TRIS rewards land in the same transaction.</span><span class="zh">一次调用领取成熟仓位：锁定的 BNB 全额返还，TRIS 奖励在同一笔交易中到账。</span></li>
+</ul>
+<h2 style="margin-top:30px"><span class="en">FAQ</span><span class="zh">问答</span></h2>
+<ul class="plain">
+<li><strong><span class="en">Is the locked BNB really returned in full?</span><span class="zh">锁定的 BNB 真的全额返还吗？</span></strong> <span class="en">Yes. The claim pays back exactly units x 0.002 BNB for every paid position. The only amount kept is the per unit service fee charged at mint time, disclosed before you mint.</span><span class="zh">是的。领取对每个付费仓位精确返还 单位数 x 0.002 BNB。唯一保留的是铸造时收取的每单位服务费，铸造前已公开。</span></li>
+<li><strong><span class="en">Why does a quota exist?</span><span class="zh">为什么有配额？</span></strong> <span class="en">Without it, one wallet could recycle the same BNB into unlimited rewards. Quotas tie minting speed to time, not to capital recycling.</span><span class="zh">没有它，一个钱包可以用同一笔 BNB 循环获得无限奖励。配额把铸造速度绑定到时间，而不是资本循环。</span></li>
+<li><strong><span class="en">Do unclaimed positions expire?</span><span class="zh">未领取的仓位会过期吗？</span></strong> <span class="en">Never. Matured positions wait until you claim them.</span><span class="zh">永不过期。成熟仓位会一直等到你领取。</span></li>
+<li><strong><span class="en">When does TRIS trade?</span><span class="zh">TRIS 何时交易？</span></strong> <span class="en">The PancakeSwap pool opens in a separate announced step using the initial pool allocation. Until then TRIS is a mint and hold token.</span><span class="zh">PancakeSwap 池将使用初始池配额在一个单独公布的步骤中开放。在此之前 TRIS 是铸造和持有型代币。</span></li>
+<li><strong><span class="en">My mint failed. Why?</span><span class="zh">我的铸造失败了，为什么？</span></strong> <span class="en">Usual causes: minting is not open yet, the wallet holds no Agent ID, the free drop was already taken today, the lock mint exceeds today's quota, or the value sent was not exactly units x 2115883825074756 wei. The skill file lists every cause for your agent.</span><span class="zh">常见原因：铸造尚未开启、钱包没有 Agent ID、今天的免费掉落已领取、锁定铸造超出今日配额，或发送金额不是精确的 单位数 x 2115883825074756 wei。技能文件为你的代理列出了全部原因。</span></li>
+</ul>
+<h2 style="margin-top:30px"><span class="en">Contracts of record</span><span class="zh">官方合约</span></h2>
+<ul class="plain">
+<li>TRIS token: <span class="mono-sm">0x110F2e9039996469C2a06f32eD0128f5F277261F</span></li>
+<li>CointrisMint: <span class="mono-sm">0xE97c8944D638e5F65D595f2dEe2f1aC211235dD0</span></li>
+<li><span class="en">Agent skill file:</span><span class="zh">代理技能文件：</span> <a href="/cointris-skill.md">cointris.xyz/cointris-skill.md</a></li>
+</ul>
+</section>
+</div>
+
+<footer><div class="wrap cols">
+<div><h4>COINTRIS</h4><p><span class="en">Blocks drop, coins stack. Mint TRIS free every day, or lock BNB for the big drops and take every last wei of it back after 24 hours.</span><span class="zh">方块掉落，代币堆叠。每天免费铸造 TRIS，或锁定 BNB 获得大额掉落，24 小时后全额取回每一 wei。</span></p></div>
+<div><h4><span class="en">READ</span><span class="zh">阅读</span></h4>
+<a href="/whitepaper.html"><span class="en">Whitepaper</span><span class="zh">白皮书</span></a>
+<a href="/tokenomics.html"><span class="en">Tokenomics</span><span class="zh">代币经济学</span></a>
+<a href="/docs.html"><span class="en">Docs and FAQ</span><span class="zh">文档与问答</span></a>
+<a href="/cointris-skill.md"><span class="en">Agent skill file</span><span class="zh">代理技能文件</span></a></div>
+<div><h4><span class="en">CONTRACTS</span><span class="zh">合约</span></h4>
+<a href="https://bscscan.com/address/0x110F2e9039996469C2a06f32eD0128f5F277261F">TRIS token</a>
+<a href="https://bscscan.com/address/0xE97c8944D638e5F65D595f2dEe2f1aC211235dD0">CointrisMint</a>
+<p class="mono-sm">TRIS 0x110F2e9039996469C2a06f32eD0128f5F277261F</p>
+<p class="mono-sm">Mint 0xE97c8944D638e5F65D595f2dEe2f1aC211235dD0</p></div>
+</div></footer>
+<script src="/js/lang.js?v=1"></script>
+</body>
+</html>
