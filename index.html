@@ -5,8 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cointris · Blocks drop, coins stack</title>
 <meta name="description" content="Cointris: free daily TRIS mints and BNB lock mints that refund in full after 24 hours.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cointris">
+<meta property="og:title" content="Cointris · Blocks drop, coins stack">
+<meta property="og:description" content="Cointris: free daily TRIS mints and BNB lock mints that refund in full after 24 hours.">
+<meta property="og:url" content="https://cointris.xyz/">
+<meta property="og:image" content="https://cointris.xyz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cointris · Blocks drop, coins stack">
+<meta name="twitter:description" content="Cointris: free daily TRIS mints and BNB lock mints that refund in full after 24 hours.">
+<meta name="twitter:image" content="https://cointris.xyz/og.png">
 <link rel="icon" href="/favicon.svg?v=1" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css?v=1">
+<link rel="stylesheet" href="/style.css?v=2">
 </head>
 <body class="lang-en">
 <div class="strip"><span class="en">CONTRACTS LIVE AND VERIFIED · MINT OPENS ON ANNOUNCEMENT · BNB LOCKS RETURN 100%</span><span class="zh">合约已上线并验证 · 铸造开启时间将公布 · BNB 锁定 100% 返还</span></div>
@@ -16,6 +26,7 @@
 <a href="/#free"><span class="en">Free drop</span><span class="zh">免费掉落</span></a>
 <a href="/#lock"><span class="en">Lock drop</span><span class="zh">锁定掉落</span></a>
 <a href="/#claim"><span class="en">Claim</span><span class="zh">领取</span></a>
+<a href="/#proof"><span class="en">Proof</span><span class="zh">证明</span></a>
 <a href="/whitepaper.html"><span class="en">Whitepaper</span><span class="zh">白皮书</span></a>
 <a href="/tokenomics.html"><span class="en">Tokenomics</span><span class="zh">代币经济学</span></a>
 <a href="/docs.html"><span class="en">Docs</span><span class="zh">文档</span></a>
@@ -28,6 +39,14 @@
 <h1><span class="en">Blocks drop.<br><span class="c1">Coins</span> <span class="c2">stack.</span><br><span class="c3">BNB comes back.</span></span><span class="zh">方块掉落。<br><span class="c1">代币</span><span class="c2">堆叠。</span><br><span class="c3">BNB 全额返还。</span></span></h1>
 <p class="sub"><span class="en">Two ways to mint TRIS through your own agent. Drop one free block every day, or lock 0.002 BNB per block for the heavy drops and claim every wei back after 24 hours, rewards included. A small fixed service fee is the only part that never comes back, stated up front.</span><span class="zh">通过你自己的代理铸造 TRIS 的两种方式。每天免费掉落一个方块，或每个方块锁定 0.002 BNB 获得大额掉落，24 小时后连同奖励取回每一 wei。唯一不返还的是一笔小额固定服务费，事先明确说明。</span></p>
 <div class="stack"><i style="background:#22d3ee;height:38px"></i><i style="background:#22d3ee;height:52px"></i><i style="background:#facc15;height:30px"></i><i style="background:#a78bfa;height:58px"></i><i style="background:#facc15;height:44px"></i><i style="background:#4ade80;height:62px"></i><i style="background:#f87171;height:36px"></i><i style="background:#60a5fa;height:50px"></i><i style="background:#4ade80;height:28px"></i><i style="background:#fb923c;height:56px"></i><i style="background:#a78bfa;height:42px"></i><i style="background:#22d3ee;height:48px"></i></div>
+<div class="count">
+<div><div class="lab"><span class="en">MINT OPENS IN</span><span class="zh">铸造开启倒计时</span></div>
+<div style="margin-top:9px"><span class="pill" id="cdPill"><i></i><span id="cdPillT"><span class="en">OPENS TODAY · 11:00 UTC</span><span class="zh">今日开启 · 11:00 UTC</span></span></span></div></div>
+<div class="t">
+<div class="u"><div class="n" id="cdH">--</div><div class="s"><span class="en">HOURS</span><span class="zh">小时</span></div></div>
+<div class="u"><div class="n" id="cdM">--</div><div class="s"><span class="en">MINUTES</span><span class="zh">分钟</span></div></div>
+<div class="u"><div class="n" id="cdS">--</div><div class="s"><span class="en">SECONDS</span><span class="zh">秒</span></div></div>
+</div></div>
 <div class="board"><h3><span class="en">LIVE BOARD · READ FROM THE CONTRACT</span><span class="zh">实时看板 · 直接读取合约</span></h3>
 <div class="grid">
 <div class="cell"><div class="k"><span class="en">UNITS MINTED</span><span class="zh">已铸造单位</span></div><div class="v" id="bUnits">0</div></div>
@@ -41,6 +60,11 @@
 </div></div></div>
 
 <div class="wrap">
+<div class="steps">
+<div class="step"><div class="n">STEP 1</div><h5><span class="en">Your agent mints</span><span class="zh">你的代理铸造</span></h5><p><span class="en">Free every day, or locked inside your daily quota. Every preview is approved by you in your Binance Agentic Wallet first.</span><span class="zh">每天免费，或在每日配额内锁定。每次预览都先由你在 Binance Agentic Wallet 中批准。</span></p></div>
+<div class="step"><div class="n">STEP 2</div><h5><span class="en">The block matures</span><span class="zh">方块成熟</span></h5><p><span class="en">Rewards are locked in at mint time and the position matures exactly 24 hours later. Nothing can change its terms while it waits.</span><span class="zh">奖励在铸造时锁定，仓位在正好 24 小时后成熟。等待期间没有任何东西能改变其条款。</span></p></div>
+<div class="step"><div class="n">STEP 3</div><h5><span class="en">Claim everything</span><span class="zh">领取一切</span></h5><p><span class="en">One claim call returns 100% of locked BNB and pays the TRIS rewards. Unclaimed positions never expire.</span><span class="zh">一次领取调用返还 100% 锁定的 BNB 并支付 TRIS 奖励。未领取的仓位永不过期。</span></p></div>
+</div>
 <section class="blk" id="free">
 <h2><span class="no">01 ·</span> <span class="en">Free drop</span><span class="zh">免费掉落</span></h2>
 <p class="lead"><span class="en">One free unit per wallet per day. No BNB, no lock, nothing to lose. The free drop pays 10% of the running epoch rate: 2,000 TRIS per unit while epoch 1 lasts. Come back tomorrow for the next block.</span><span class="zh">每个钱包每天一个免费单位。无需 BNB，无需锁定，没有任何损失。免费掉落支付当前纪元费率的 10%：纪元 1 期间每单位 2,000 TRIS。明天再来领取下一个方块。</span></p>
@@ -82,6 +106,23 @@
 <button class="copybtn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText)"><span class="en">Copy</span><span class="zh">复制</span></button></div>
 <p><span class="tag"><span class="en">BNB back 100%</span><span class="zh">BNB 返还 100%</span></span><span class="tag"><span class="en">Rewards locked at mint time</span><span class="zh">奖励在铸造时锁定</span></span><span class="tag"><span class="en">No expiry</span><span class="zh">永不过期</span></span><span class="tag"><span class="en">Contracts verified</span><span class="zh">合约已验证</span></span></p>
 </section>
+
+<section class="blk" id="proof">
+<h2><span class="no">04 ·</span> <span class="en">Proof, not promises</span><span class="zh">用证据，不用承诺</span></h2>
+<p class="lead"><span class="en">Every claim on this page can be checked without trusting us. Pool balances, locked funds and the rules themselves live in verified contract code that anyone can read.</span><span class="zh">本页的每个说法都无需信任我们即可核查。池余额、锁定资金和规则本身都写在任何人可读的已验证合约代码中。</span></p>
+<div class="proofs">
+<div class="proof"><div class="bar" style="background:var(--cyan)"></div><h5><span class="en">POOL FUNDED FIRST</span><span class="zh">池子先行注资</span></h5><p><span class="en">6,000,000,000 TRIS were moved into the mint contract before public minting opens. Your rewards never depend on future buyers showing up.</span><span class="zh">在公开铸造开启之前，6,000,000,000 TRIS 已转入铸造合约。你的奖励从不依赖未来的买家。</span></p><a href="https://bscscan.com/address/0xE97c8944D638e5F65D595f2dEe2f1aC211235dD0"><span class="en">Check the contract balance</span><span class="zh">查看合约余额</span> →</a></div>
+<div class="proof"><div class="bar" style="background:var(--green)"></div><h5><span class="en">LOCKED BNB CANNOT BE TOUCHED</span><span class="zh">锁定的 BNB 无人能动</span></h5><p><span class="en">Locked BNB and project fees are separate buckets in the contract accounting. The owner withdrawal reads the fee bucket only, so claims can always pay every lock back in full.</span><span class="zh">锁定的 BNB 和项目费用在合约记账中是独立的桶。所有者提款只能读取费用桶，因此领取永远能全额返还每一笔锁定。</span></p><a href="https://sourcify.dev/#/lookup/0xE97c8944D638e5F65D595f2dEe2f1aC211235dD0"><span class="en">Read the verified source</span><span class="zh">阅读已验证源码</span> →</a></div>
+<div class="proof"><div class="bar" style="background:var(--yellow)"></div><h5><span class="en">SOURCE CODE VERIFIED</span><span class="zh">源代码已验证</span></h5><p><span class="en">Both contracts are verified on Sourcify with a full match and readable on BscScan. The addresses on this page are exactly the addresses in the agent skill file.</span><span class="zh">两个合约都在 Sourcify 完全匹配验证，也可在 BscScan 阅读。本页的地址与代理技能文件中的地址完全一致。</span></p><a href="https://sourcify.dev/#/lookup/0x110F2e9039996469C2a06f32eD0128f5F277261F"><span class="en">Verify the token</span><span class="zh">验证代币合约</span> →</a></div>
+<div class="proof"><div class="bar" style="background:var(--violet)"></div><h5><span class="en">RULES ARE CONSTANTS</span><span class="zh">规则就是常数</span></h5><p><span class="en">Lock size, the service fee, daily quotas and the halving schedule are constants compiled into the contract. No settings page and no admin function can rewrite them later.</span><span class="zh">锁定金额、服务费、每日配额和减半计划都是编译进合约的常数。没有设置页面，也没有管理员函数能在日后改写它们。</span></p><a href="/whitepaper.html"><span class="en">Read the full rules</span><span class="zh">阅读完整规则</span> →</a></div>
+</div>
+<div class="faq">
+<div class="q"><h5><span class="en">Is my BNB spent or locked?</span><span class="zh">我的 BNB 是被花掉还是被锁定？</span></h5><p><span class="en">Locked. It sits in the contract for exactly 24 hours and comes back in the same claim that pays your TRIS reward.</span><span class="zh">被锁定。它在合约中停放正好 24 小时，并在支付你 TRIS 奖励的同一次领取中返还。</span></p></div>
+<div class="q"><h5><span class="en">What does Cointris earn?</span><span class="zh">Cointris 赚什么？</span></h5><p><span class="en">One fixed service fee of 115,883,825,074,756 wei, about $0.09, per lock unit, written into the contract. Nothing else: no claim fee, no token tax, no share of your lock.</span><span class="zh">每单位锁定一笔固定的服务费 115,883,825,074,756 wei，约 $0.09，写在合约里。除此之外没有别的：没有领取费，没有代币税，不分你的锁定。</span></p></div>
+<div class="q"><h5><span class="en">Can the rules change after I mint?</span><span class="zh">我铸造之后规则会变吗？</span></h5><p><span class="en">No. Your reward is locked into your position at mint time, and the constants behind it cannot be edited. Claims pay by the rules as they were when you minted.</span><span class="zh">不会。你的奖励在铸造时就锁定在仓位里，其背后的常数无法编辑。领取按你铸造时的规则支付。</span></p></div>
+</div>
+<p style="margin-top:14px"><a href="/docs.html"><span class="en">More questions in the docs</span><span class="zh">更多问题见文档</span> →</a></p>
+</section>
 </div>
 
 <footer><div class="wrap cols">
@@ -94,10 +135,12 @@
 <div><h4><span class="en">CONTRACTS</span><span class="zh">合约</span></h4>
 <a href="https://bscscan.com/address/0x110F2e9039996469C2a06f32eD0128f5F277261F">TRIS token</a>
 <a href="https://bscscan.com/address/0xE97c8944D638e5F65D595f2dEe2f1aC211235dD0">CointrisMint</a>
+<a href="https://sourcify.dev/#/lookup/0x110F2e9039996469C2a06f32eD0128f5F277261F">TRIS · Sourcify verified</a>
+<a href="https://sourcify.dev/#/lookup/0xE97c8944D638e5F65D595f2dEe2f1aC211235dD0">CointrisMint · Sourcify verified</a>
 <p class="mono-sm">TRIS 0x110F2e9039996469C2a06f32eD0128f5F277261F</p>
 <p class="mono-sm">Mint 0xE97c8944D638e5F65D595f2dEe2f1aC211235dD0</p></div>
 </div></footer>
-<script src="/js/lang.js?v=1"></script>
+<script src="/js/lang.js?v=2"></script>
 </body>
 </html>
-<script src="/js/app.js?v=1"></script>
+<script src="/js/app.js?v=2"></script>
