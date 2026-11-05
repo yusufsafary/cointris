@@ -80,6 +80,30 @@ footer a { display: block; color: var(--muted); margin: 5px 0; overflow-wrap: an
 footer a:hover { color: var(--cyan); text-decoration: none; }
 .mono-sm { font-size: 12px; overflow-wrap: anywhere; }
 .tag { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 2px 11px; font-size: 12px; color: var(--muted); margin: 2px 3px 2px 0; }
+.pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--panel2); border-radius: 999px; padding: 6px 14px; font-size: 12px; letter-spacing: 2px; font-weight: 600; }
+.pill i { width: 9px; height: 9px; border-radius: 50%; background: var(--yellow); display: block; }
+.pill.live i { background: var(--green); }
+.count { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin-top: 22px; }
+.count .lab { font-size: 12px; letter-spacing: 3px; color: var(--muted); font-weight: 600; }
+.count .t { display: flex; gap: 8px; margin-left: auto; }
+.count .u { background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; padding: 8px 0; width: 74px; text-align: center; }
+.count .u .n { font-size: 26px; font-weight: 600; line-height: 1.15; }
+.count .u .s { font-size: 10px; letter-spacing: 2px; color: var(--muted); }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 28px 0 2px; }
+.step { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: var(--panel); }
+.step .n { font-family: "Bungee", cursive; color: var(--yellow); font-size: 14px; letter-spacing: 1px; }
+.step h5 { font-size: 15px; margin: 6px 0 4px; }
+.step p { color: var(--muted); font-size: 13.5px; }
+.proofs { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin: 16px 0; }
+.proof { border: 1px solid var(--line); border-radius: 12px; padding: 18px; background: var(--panel); }
+.proof .bar { height: 4px; border-radius: 2px; margin-bottom: 12px; }
+.proof h5 { font-size: 15px; margin-bottom: 6px; letter-spacing: .3px; }
+.proof p { color: var(--muted); font-size: 13.5px; }
+.proof a { font-size: 13px; display: inline-block; margin-top: 8px; }
+.faq { margin: 8px 0 0; }
+.faq .q { border: 1px solid var(--line); border-radius: 12px; padding: 15px 18px; background: var(--panel); margin: 10px 0; }
+.faq .q h5 { font-size: 15px; margin-bottom: 4px; }
+.faq .q p { color: var(--muted); font-size: 14px; }
 ul.plain { margin: 10px 0 10px 20px; color: var(--muted); }
 ul.plain li { margin: 5px 0; }
 strong { color: var(--ink); }
