@@ -118,6 +118,21 @@ table.scores td.num, table.scores th.num { text-align: right; }
 @keyframes rowin { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: none; } }
 .liverow { animation: rowin .45s ease both; }
 @media (prefers-reduced-motion: reduce) { .liverow { animation: none; } .board .bar i { transition: none; } }
+#fx { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.hero-in { z-index: 2; }
+.hero { cursor: pointer; }
+.herohint { margin-top: 10px; font-size: 11px; letter-spacing: 2.2px; color: var(--muted); }
+.herohint span { color: var(--yellow); font-weight: 700; }
+.chip { position: absolute; z-index: 3; font-family: "IBM Plex Mono", monospace; font-weight: 700; font-size: 15px; color: var(--yellow); pointer-events: none; animation: chipup 1.15s ease-out forwards; text-shadow: 0 2px 10px rgba(0,0,0,.5); }
+@keyframes chipup { 0% { opacity: 0; transform: translateY(6px); } 18% { opacity: 1; } 100% { opacity: 0; transform: translateY(-58px); } }
+.rv { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+.rv.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } .chip { animation: none; opacity: 0; } }
+@keyframes flashBg { 0% { background: rgba(250, 204, 21, .20); } 100% { background: transparent; } }
+.cell.flash { animation: flashBg .9s ease; }
+.prompt { transition: transform .25s ease, border-color .25s ease; }
+@media (hover: hover) { .prompt:hover { transform: translateY(-2px); border-color: var(--yellow); } }
+.liverow:first-child { box-shadow: inset 3px 0 0 var(--yellow); }
 .calc { margin-top: 16px; }
 .calc .chead { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .calc .cval { font-family: "Bungee"; font-size: 30px; color: var(--yellow); }
