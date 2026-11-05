@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="Cointris: free daily TRIS mints and BNB lock mints that refund in full after 24 hours.">
 <meta name="twitter:image" content="https://cointris.xyz/og.png">
 <link rel="icon" href="/favicon.svg?v=1" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css?v=2">
+<link rel="stylesheet" href="/style.css?v=3">
 </head>
 <body class="lang-en">
 <div class="strip"><span class="en">CONTRACTS LIVE AND VERIFIED · MINT OPENS ON ANNOUNCEMENT · BNB LOCKS RETURN 100%</span><span class="zh">合约已上线并验证 · 铸造开启时间将公布 · BNB 锁定 100% 返还</span></div>
@@ -27,6 +27,7 @@
 <a href="/#lock"><span class="en">Lock drop</span><span class="zh">锁定掉落</span></a>
 <a href="/#claim"><span class="en">Claim</span><span class="zh">领取</span></a>
 <a href="/#proof"><span class="en">Proof</span><span class="zh">证明</span></a>
+<a href="/#scores"><span class="en">Scores</span><span class="zh">排行</span></a>
 <a href="/whitepaper.html"><span class="en">Whitepaper</span><span class="zh">白皮书</span></a>
 <a href="/tokenomics.html"><span class="en">Tokenomics</span><span class="zh">代币经济学</span></a>
 <a href="/docs.html"><span class="en">Docs</span><span class="zh">文档</span></a>
@@ -123,6 +124,17 @@
 </div>
 <p style="margin-top:14px"><a href="/docs.html"><span class="en">More questions in the docs</span><span class="zh">更多问题见文档</span> →</a></p>
 </section>
+
+<section class="blk" id="scores">
+<h2><span class="no">05 ·</span> <span class="en">High scores</span><span class="zh">排行榜</span></h2>
+<p class="lead"><span class="en">Ranked by total units minted, read straight from contract events. Quotas keep this board honest: nobody can buy the top spot in a day, so rank belongs to early and steady stackers.</span><span class="zh">按铸造总单位排名，数据直接来自合约事件。配额让排行榜保持诚实：没有人能在一天内买下榜首，排名属于早期而稳定的玩家。</span></p>
+<div id="scoresEmpty" class="proof" style="margin:16px 0"><div class="bar" style="background:var(--red)"></div><h5><span class="en">NO BLOCKS DROPPED YET</span><span class="zh">尚无方块掉落</span></h5><p><span class="en">Mint opens today at 11:00 UTC. The first wallet on this board takes rank 1, and epoch 1 pays the highest rate that will ever exist.</span><span class="zh">铸造于今日 11:00 UTC 开启。第一个登上排行榜的钱包就是第一名，而纪元 1 的费率将是史上最高。</span></p></div>
+<table class="scores" id="scoresTable" style="display:none">
+<thead><tr><th>#</th><th><span class="en">STACKER</span><span class="zh">玩家</span></th><th class="num"><span class="en">UNITS</span><span class="zh">单位</span></th><th class="num"><span class="en">TRIS LOCKED IN</span><span class="zh">已锁定 TRIS</span></th></tr></thead>
+<tbody id="scoresBody"></tbody>
+</table>
+<p class="scores-note" id="scoresNote"></p>
+</section>
 </div>
 
 <footer><div class="wrap cols">
@@ -143,4 +155,4 @@
 <script src="/js/lang.js?v=2"></script>
 </body>
 </html>
-<script src="/js/app.js?v=2"></script>
+<script src="/js/app.js?v=3"></script>
