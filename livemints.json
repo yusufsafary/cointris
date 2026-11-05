@@ -1,6 +1,76 @@
 {
- "updatedAt": "2026-11-05T11:15:40.116Z",
+ "updatedAt": "2026-11-05T11:30:39.160Z",
  "feed": [
+  {
+   "ts": 1793878145,
+   "wallet": "0x937E9c2B234a4695BdF39e0f261C865E33b5B7A6",
+   "kind": "free",
+   "units": 1,
+   "tris": "2000"
+  },
+  {
+   "ts": 1793878135,
+   "wallet": "0x9277388f4c5e5f6B537320e91C2F807Cb2B16266",
+   "kind": "free",
+   "units": 1,
+   "tris": "2000"
+  },
+  {
+   "ts": 1793877719,
+   "wallet": "0xB1Df69B5785392E3bb6f9Ba74564565f367840F3",
+   "kind": "free",
+   "units": 1,
+   "tris": "2000"
+  },
+  {
+   "ts": 1793877543,
+   "wallet": "0xa7B9B40C2dEd63F6bCcDA2318D157C2f8fc9BF75",
+   "kind": "free",
+   "units": 1,
+   "tris": "2000"
+  },
+  {
+   "ts": 1793877535,
+   "wallet": "0x630cBf4b77dBF508df390f68F2cdcfDbe0D5cbeb",
+   "kind": "free",
+   "units": 1,
+   "tris": "2000"
+  },
+  {
+   "ts": 1793877526,
+   "wallet": "0x7164d85B50271b4b49cc73046E6E868C44A1B7b2",
+   "kind": "free",
+   "units": 1,
+   "tris": "2000"
+  },
+  {
+   "ts": 1793877490,
+   "wallet": "0x8E681009D82A1409DDA6eE4EEe605b3132455F4B",
+   "kind": "free",
+   "units": 1,
+   "tris": "2000"
+  },
+  {
+   "ts": 1793877479,
+   "wallet": "0x8eB5f4E3388fd80458884EDB0507143b10d6f5b8",
+   "kind": "free",
+   "units": 1,
+   "tris": "2000"
+  },
+  {
+   "ts": 1793877367,
+   "wallet": "0x2a3159FbCed676A97386F644B4a9Ba9908A9185e",
+   "kind": "free",
+   "units": 1,
+   "tris": "2000"
+  },
+  {
+   "ts": 1793877363,
+   "wallet": "0x4d1D1e193713B2A6eE20BCe0af3e8614D8d224E5",
+   "kind": "free",
+   "units": 1,
+   "tris": "2000"
+  },
   {
    "ts": 1793877163,
    "wallet": "0x7179f9905FDc9901c8a00662eC8da9872A6E0535",
@@ -95,76 +165,6 @@
   {
    "ts": 1793877093,
    "wallet": "0xA7EF48e0B349aCF5ab5A439da96b568C807FCA99",
-   "kind": "free",
-   "units": 1,
-   "tris": "2000"
-  },
-  {
-   "ts": 1793877091,
-   "wallet": "0xe4019d1580209Db8b67B9fdcdb2942e238257A5F",
-   "kind": "free",
-   "units": 1,
-   "tris": "2000"
-  },
-  {
-   "ts": 1793877077,
-   "wallet": "0xeEbe5192118d7DF9158EE0F070b2da05B48eb3A3",
-   "kind": "free",
-   "units": 1,
-   "tris": "2000"
-  },
-  {
-   "ts": 1793877055,
-   "wallet": "0x06418690951C34f758521fd7225d35a0F9378D6D",
-   "kind": "free",
-   "units": 1,
-   "tris": "2000"
-  },
-  {
-   "ts": 1793876941,
-   "wallet": "0x94bf24F43E2e117172e04a1b603404eBb89Fc670",
-   "kind": "free",
-   "units": 1,
-   "tris": "2000"
-  },
-  {
-   "ts": 1793876746,
-   "wallet": "0xF4322d4DcF4E63D73074b23D0321523b4e9487F2",
-   "kind": "free",
-   "units": 1,
-   "tris": "2000"
-  },
-  {
-   "ts": 1793876678,
-   "wallet": "0xBc2a4a71ac56A37804ee5eA816DF899ac53dF5Ff",
-   "kind": "free",
-   "units": 1,
-   "tris": "2000"
-  },
-  {
-   "ts": 1793876642,
-   "wallet": "0x9c3657aF5A3091cdd305a04D3A98508105Bf79d9",
-   "kind": "free",
-   "units": 1,
-   "tris": "2000"
-  },
-  {
-   "ts": 1793876523,
-   "wallet": "0xFAb2792AB890C8657E377E868F69a4579dd41136",
-   "kind": "free",
-   "units": 1,
-   "tris": "2000"
-  },
-  {
-   "ts": 1793876440,
-   "wallet": "0xDAee9eF06d9f51254DDdcd592eF53A3BF1836383",
-   "kind": "free",
-   "units": 1,
-   "tris": "2000"
-  },
-  {
-   "ts": 1793876428,
-   "wallet": "0xbb8E10B70AAc1fFb95F2BF128Ba4EE1A61673040",
    "kind": "free",
    "units": 1,
    "tris": "2000"
