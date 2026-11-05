@@ -42,6 +42,23 @@ async function board() {
   } catch (e) { /* board tetap pada nilai awal */ }
 }
 board();
+async function scores() {
+  try {
+    const r = await fetch("/leaderboard.json", { cache: "no-store" });
+    if (!r.ok) return;
+    const j = await r.json();
+    if (!j.entries || !j.entries.length) return;
+    const short = (w) => w.slice(0, 6) + "…" + w.slice(-4);
+    document.getElementById("scoresBody").innerHTML = j.entries.slice(0, 10).map((e, i) =>
+      `<tr><td class="rk">${i + 1}</td><td>${short(e.wallet)}</td><td class="num">${fmt(BigInt(e.units))}</td><td class="num">${fmt(BigInt(e.tris))} TRIS</td></tr>`).join("");
+    document.getElementById("scoresTable").style.display = "";
+    const em = document.getElementById("scoresEmpty");
+    if (em) em.style.display = "none";
+    const d = new Date(j.updatedAt);
+    document.getElementById("scoresNote").textContent = "Top " + Math.min(10, j.entries.length) + " of " + j.totalWallets + " stackers · updated " + d.toISOString().slice(0, 16).replace("T", " ") + " UTC";
+  } catch (e) { /* papan tetap pada keadaan awal */ }
+}
+scores();
 const OPEN_AT = Date.UTC(2026, 10, 5, 11, 0, 0);
 function tick() {
   const h = document.getElementById("cdH"), m = document.getElementById("cdM"), s = document.getElementById("cdS");
