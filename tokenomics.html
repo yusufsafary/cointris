@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cointris Tokenomics</title>
+<meta name="description" content="TRIS supply, allocation and the 11 epoch emission schedule.">
+<link rel="icon" href="/favicon.svg?v=1" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css?v=1">
+</head>
+<body class="lang-en">
+
+<header class="top"><div class="wrap top-in">
+<a class="logo" href="/"><span class="mini"><i style="background:var(--cyan)"></i><i style="background:var(--yellow)"></i><i style="background:var(--violet)"></i><i style="background:var(--green)"></i></span>COINTRIS</a>
+<nav class="main">
+<a href="/#free"><span class="en">Free drop</span><span class="zh">免费掉落</span></a>
+<a href="/#lock"><span class="en">Lock drop</span><span class="zh">锁定掉落</span></a>
+<a href="/#claim"><span class="en">Claim</span><span class="zh">领取</span></a>
+<a href="/whitepaper.html"><span class="en">Whitepaper</span><span class="zh">白皮书</span></a>
+<a href="/tokenomics.html"><span class="en">Tokenomics</span><span class="zh">代币经济学</span></a>
+<a href="/docs.html"><span class="en">Docs</span><span class="zh">文档</span></a>
+</nav>
+<button class="langbtn" id="langBtn" onclick="ctLang(document.body.classList.contains('lang-zh') ? 'en' : 'zh')">中文</button>
+</div></header>
+
+<div class="wrap">
+<section class="blk">
+<h2><span class="en">Tokenomics</span><span class="zh">代币经济学</span></h2>
+<p class="lead"><span class="en">TRIS has a fixed supply of 10,000,000,000. No further minting exists anywhere in the contracts.</span><span class="zh">TRIS 的总供应固定为 10,000,000,000。合约中不存在任何后续铸造。</span></p>
+<div class="alloc">
+<div class="row"><span class="nm"><span class="en">Mining reserve</span><span class="zh">挖矿储备</span></span><span class="tr"><i style="width:60%;background:var(--yellow)"></i></span><span class="pc">60% · 6,000,000,000</span></div>
+<div class="row"><span class="nm"><span class="en">Initial pool</span><span class="zh">初始池</span></span><span class="tr"><i style="width:20%;background:var(--cyan)"></i></span><span class="pc">20% · 2,000,000,000</span></div>
+<div class="row"><span class="nm"><span class="en">Liquidity support</span><span class="zh">流动性支持</span></span><span class="tr"><i style="width:10%;background:var(--violet)"></i></span><span class="pc">10% · 1,000,000,000</span></div>
+<div class="row"><span class="nm"><span class="en">Project reserve</span><span class="zh">项目储备</span></span><span class="tr"><i style="width:10%;background:var(--green)"></i></span><span class="pc">10% · 1,000,000,000</span></div>
+</div>
+<p class="lead"><span class="en">The mining reserve is held by the CointrisMint contract and pays every reward. If every one of the 1,650,000 units across all epochs were a paid unit, total emission would be 5,996,850,000 TRIS, inside the reserve. Free units pay a tenth, so real emission lands lower.</span><span class="zh">挖矿储备由 CointrisMint 合约持有并支付每一笔奖励。如果全部纪元 1,650,000 个单位都是付费单位，总发行量为 5,996,850,000 TRIS，在储备之内。免费单位只支付十分之一，因此实际发行量更低。</span></p>
+<h2 style="margin-top:30px"><span class="en">Emission schedule</span><span class="zh">发行计划</span></h2>
+<table>
+<tr><th><span class="en">Epoch</span><span class="zh">纪元</span></th><th><span class="en">Reward per paid unit</span><span class="zh">每付费单位奖励</span></th><th><span class="en">Epoch emission (paid only)</span><span class="zh">纪元发行量（仅付费）</span></th></tr>
+<tr><td>1</td><td>20,000 TRIS</td><td>3,000,000,000 TRIS</td></tr><tr><td>2</td><td>10,000 TRIS</td><td>1,500,000,000 TRIS</td></tr><tr><td>3</td><td>5,000 TRIS</td><td>750,000,000 TRIS</td></tr><tr><td>4</td><td>2,500 TRIS</td><td>375,000,000 TRIS</td></tr><tr><td>5</td><td>1,250 TRIS</td><td>187,500,000 TRIS</td></tr><tr><td>6</td><td>625 TRIS</td><td>93,750,000 TRIS</td></tr><tr><td>7</td><td>312 TRIS</td><td>46,800,000 TRIS</td></tr><tr><td>8</td><td>156 TRIS</td><td>23,400,000 TRIS</td></tr><tr><td>9</td><td>78 TRIS</td><td>11,700,000 TRIS</td></tr><tr><td>10</td><td>39 TRIS</td><td>5,850,000 TRIS</td></tr><tr><td>11</td><td>19 TRIS</td><td>2,850,000 TRIS</td></tr>
+</table>
+<p class="lead"><span class="en">Free units earn a tenth of the listed rate. Each epoch holds 150,000 units across both paths.</span><span class="zh">免费单位获得所列费率的十分之一。每个纪元包含两条路径共 150,000 个单位。</span></p>
+</section>
+</div>
+
+<footer><div class="wrap cols">
+<div><h4>COINTRIS</h4><p><span class="en">Blocks drop, coins stack. Mint TRIS free every day, or lock BNB for the big drops and take every last wei of it back after 24 hours.</span><span class="zh">方块掉落，代币堆叠。每天免费铸造 TRIS，或锁定 BNB 获得大额掉落，24 小时后全额取回每一 wei。</span></p></div>
+<div><h4><span class="en">READ</span><span class="zh">阅读</span></h4>
+<a href="/whitepaper.html"><span class="en">Whitepaper</span><span class="zh">白皮书</span></a>
+<a href="/tokenomics.html"><span class="en">Tokenomics</span><span class="zh">代币经济学</span></a>
+<a href="/docs.html"><span class="en">Docs and FAQ</span><span class="zh">文档与问答</span></a>
+<a href="/cointris-skill.md"><span class="en">Agent skill file</span><span class="zh">代理技能文件</span></a></div>
+<div><h4><span class="en">CONTRACTS</span><span class="zh">合约</span></h4>
+<a href="https://bscscan.com/address/0x110F2e9039996469C2a06f32eD0128f5F277261F">TRIS token</a>
+<a href="https://bscscan.com/address/0xE97c8944D638e5F65D595f2dEe2f1aC211235dD0">CointrisMint</a>
+<p class="mono-sm">TRIS 0x110F2e9039996469C2a06f32eD0128f5F277261F</p>
+<p class="mono-sm">Mint 0xE97c8944D638e5F65D595f2dEe2f1aC211235dD0</p></div>
+</div></footer>
+<script src="/js/lang.js?v=1"></script>
+</body>
+</html>
