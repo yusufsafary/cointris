@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Cointris: free daily TRIS mints and BNB lock mints that refund in full after 24 hours.">
 <meta name="twitter:image" content="https://cointris.xyz/og.png">
 <link rel="icon" href="/favicon.svg?v=1" type="image/svg+xml">
-<link rel="stylesheet" href="/style.css?v=5">
+<link rel="stylesheet" href="/style.css?v=6">
 </head>
 <body class="lang-en">
 <div class="strip"><span class="en">MINT IS LIVE · FREE DROP DAILY · BNB LOCKS RETURN 100%</span><span class="zh">铸造已开启 · 每日免费掉落 · BNB 锁定 100% 返还</span></div>
@@ -43,14 +43,6 @@
 <h1><span class="en">Blocks drop.<br><span class="c1">Coins</span> <span class="c2">stack.</span><br><span class="c3">BNB comes back.</span></span><span class="zh">方块掉落。<br><span class="c1">代币</span><span class="c2">堆叠。</span><br><span class="c3">BNB 全额返还。</span></span></h1>
 <p class="sub"><span class="en">Two ways to mint TRIS through your own agent. Drop one free block every day, or lock 0.002 BNB per block for the heavy drops and claim every wei back after 24 hours, rewards included. A small fixed service fee is the only part that never comes back, stated up front.</span><span class="zh">通过你自己的代理铸造 TRIS 的两种方式。每天免费掉落一个方块，或每个方块锁定 0.002 BNB 获得大额掉落，24 小时后连同奖励取回每一 wei。唯一不返还的是一笔小额固定服务费，事先明确说明。</span></p>
 <div class="stack"><i style="background:#22d3ee;height:38px"></i><i style="background:#22d3ee;height:52px"></i><i style="background:#facc15;height:30px"></i><i style="background:#a78bfa;height:58px"></i><i style="background:#facc15;height:44px"></i><i style="background:#4ade80;height:62px"></i><i style="background:#f87171;height:36px"></i><i style="background:#60a5fa;height:50px"></i><i style="background:#4ade80;height:28px"></i><i style="background:#fb923c;height:56px"></i><i style="background:#a78bfa;height:42px"></i><i style="background:#22d3ee;height:48px"></i></div>
-<div class="count">
-<div><div class="lab"><span class="en">MINT OPENS IN</span><span class="zh">铸造开启倒计时</span></div>
-<div style="margin-top:9px"><span class="pill" id="cdPill"><i></i><span id="cdPillT"><span class="en">OPENS TODAY · 11:00 UTC</span><span class="zh">今日开启 · 11:00 UTC</span></span></span></div></div>
-<div class="t">
-<div class="u"><div class="n" id="cdH">--</div><div class="s"><span class="en">HOURS</span><span class="zh">小时</span></div></div>
-<div class="u"><div class="n" id="cdM">--</div><div class="s"><span class="en">MINUTES</span><span class="zh">分钟</span></div></div>
-<div class="u"><div class="n" id="cdS">--</div><div class="s"><span class="en">SECONDS</span><span class="zh">秒</span></div></div>
-</div></div>
 <div class="board"><h3><span class="en">LIVE BOARD · READ FROM THE CONTRACT</span><span class="zh">实时看板 · 直接读取合约</span></h3>
 <div class="grid">
 <div class="cell"><div class="k"><span class="en">UNITS MINTED</span><span class="zh">已铸造单位</span></div><div class="v" id="bUnits">0</div></div>
@@ -107,6 +99,17 @@
 <div class="fact"><div class="k"><span class="en">REFUND</span><span class="zh">返还</span></div><div class="v"><span class="en">100% after 24 hours</span><span class="zh">24 小时后 100%</span></div></div>
 <div class="fact"><div class="k"><span class="en">REWARD</span><span class="zh">奖励</span></div><div class="v"><span class="en">Full epoch rate</span><span class="zh">完整纪元费率</span></div></div>
 <div class="fact"><div class="k"><span class="en">MAX PER CALL</span><span class="zh">单次上限</span></div><div class="v"><span class="en">10 units</span><span class="zh">10 单位</span></div></div>
+</div>
+<div class="card calc">
+<div class="chead"><h5><span class="en">Try the lock</span><span class="zh">试试锁定</span></h5><span class="cval"><span id="calcQ">5</span> <span class="en">units</span><span class="zh">单位</span></span></div>
+<input type="range" id="calcUnits" min="1" max="10" step="1" value="5" aria-label="units">
+<div class="cgrid">
+<div class="ccell"><div class="k"><span class="en">YOU LOCK</span><span class="zh">你锁定</span></div><div class="v" id="calcLock">0.010 BNB</div></div>
+<div class="ccell"><div class="k"><span class="en">REWARD LOCKED IN</span><span class="zh">锁定奖励</span></div><div class="v" id="calcReward">100,000 TRIS</div></div>
+<div class="ccell"><div class="k"><span class="en">SERVICE FEE</span><span class="zh">服务费</span></div><div class="v" id="calcFee">±$0.45</div></div>
+<div class="ccell"><div class="k"><span class="en">BACK AFTER 24H</span><span class="zh">24 小时后返还</span></div><div class="v"><span class="en">Lock 100% + reward</span><span class="zh">锁定 100% + 奖励</span></div></div>
+</div>
+<p class="scores-note"><span class="en">Reward uses the live epoch rate from the board above. Your daily quota still applies.</span><span class="zh">奖励使用上方看板的实时纪元费率。你的每日配额仍然适用。</span></p>
 </div>
 <div class="prompt"><div class="t"><span class="en">SEND THIS TO YOUR AGENT</span><span class="zh">把这段发给你的代理</span></div><code><span class="en">Read https://cointris.xyz/cointris-skill.md and follow it exactly. Use my Binance Agentic Wallet to make a LOCK mint on Cointris: check my remaining quota with quotaLeft, then call mintPaid(q) for q units with the exact value from the skill file. Preview first, then tell me the locked BNB, the fee, the TRIS reward locked in, and the claim time 24 hours later.</span><span class="zh">阅读 https://cointris.xyz/cointris-skill.md 并严格照做。用我的 Binance Agentic Wallet 在 Cointris 做锁定铸造：先用 quotaLeft 查我的剩余额度，再按技能文件的确切金额调用 mintPaid(q)。先预览，然后告诉我锁定的 BNB、服务费、锁定的 TRIS 奖励，以及 24 小时后的领取时间。</span></code>
 <button class="copybtn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText)"><span class="en">Copy</span><span class="zh">复制</span></button></div>
@@ -169,4 +172,4 @@
 <script src="/js/lang.js?v=2"></script>
 </body>
 </html>
-<script src="/js/app.js?v=4"></script>
+<script src="/js/app.js?v=5"></script>
