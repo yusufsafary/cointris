@@ -1,7 +1,133 @@
 {
- "updatedAt": "2026-11-05T11:03:29.482Z",
- "totalWallets": 7,
+ "updatedAt": "2026-11-05T11:15:40.102Z",
+ "totalWallets": 28,
  "entries": [
+  {
+   "wallet": "0x7179f9905FDc9901c8a00662eC8da9872A6E0535",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0x593634fF6CCe3450fd993E4C530Df49e83B82c6E",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0x9D9a7EEe836ad0fbF382799d11FC8711678dA363",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0xd792F7baa1bDDfaBA0A51A4dE0E6f35Cf7275780",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0xe9C6734A16501877eA85217899712BdB29881315",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0xA8A35aEFF637f06Aa334138AC1ba99B6E8CF6019",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0x4C554F3d0Be2fDBaf3c5e7064a3a482b1299D945",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0x32A36c79A3f6B2af912b14Da9D9429328a720209",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0x4D5C6F9f16FFd8EDf2010916fdEC04bF6A493C42",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0xcEcbdf06eaf6F0e55c3016Fa0Af38B721030b307",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0xaB580A3455B85eD1882a6Fd5f09E5D1223dD4683",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0x6AD99aC61AF73Da5441dC97bDcA1cbb7ACA8A7E9",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0xbF459222d5217d21903B502c0d196F670d85D607",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0xA7EF48e0B349aCF5ab5A439da96b568C807FCA99",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0xe4019d1580209Db8b67B9fdcdb2942e238257A5F",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0xeEbe5192118d7DF9158EE0F070b2da05B48eb3A3",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0x06418690951C34f758521fd7225d35a0F9378D6D",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0x94bf24F43E2e117172e04a1b603404eBb89Fc670",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0xF4322d4DcF4E63D73074b23D0321523b4e9487F2",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0xBc2a4a71ac56A37804ee5eA816DF899ac53dF5Ff",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
+  {
+   "wallet": "0x9c3657aF5A3091cdd305a04D3A98508105Bf79d9",
+   "units": 1,
+   "tris": "2000",
+   "claimed": "0"
+  },
   {
    "wallet": "0xFAb2792AB890C8657E377E868F69a4579dd41136",
    "units": 1,
