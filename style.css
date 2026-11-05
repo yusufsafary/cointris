@@ -114,6 +114,18 @@ table.scores td.num, table.scores th.num { text-align: right; }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
 @media (prefers-reduced-motion: reduce) { .livedot { animation: none; } }
 .emptyblock { padding: 26px 18px; text-align: center; color: var(--muted); letter-spacing: 1.6px; font-size: 13px; }
+.board .bar i { transition: width .9s ease; }
+@keyframes rowin { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: none; } }
+.liverow { animation: rowin .45s ease both; }
+@media (prefers-reduced-motion: reduce) { .liverow { animation: none; } .board .bar i { transition: none; } }
+.calc { margin-top: 16px; }
+.calc .chead { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.calc .cval { font-family: "Bungee"; font-size: 30px; color: var(--yellow); }
+.calc input[type="range"] { width: 100%; margin: 14px 0 6px; accent-color: var(--yellow); height: 28px; cursor: pointer; }
+.calc .cgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-top: 10px; }
+.calc .ccell { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; background: var(--panel2, #171736); }
+.calc .ccell .k { font-size: 10.5px; letter-spacing: 1.6px; color: var(--muted); }
+.calc .ccell .v { font-size: 17px; font-weight: 700; margin-top: 3px; }
 .liverow { display: grid; grid-template-columns: 96px 1fr auto auto; gap: 6px 14px; align-items: baseline; padding: 10px 14px; border-top: 1px solid var(--line); font-size: 14px; }
 .liverow:first-child { border-top: none; }
 .liverow .lt { color: var(--muted); font-size: 12.5px; }
