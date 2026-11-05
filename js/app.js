@@ -20,11 +20,17 @@ const fmt = (n) => n.toLocaleString("en-US");
 const fmtT = (wei) => fmt(wei / 10n ** 18n);
 async function board() {
   try {
-    const [units, epoch, rate, free, pool] = await Promise.all([
+    const [units, epoch, rate, free, pool, open] = await Promise.all([
       rpcCall(CONFIG.mint, SEL.totalUnits), rpcCall(CONFIG.mint, SEL.epoch),
       rpcCall(CONFIG.mint, SEL.rateNow), rpcCall(CONFIG.mint, SEL.freeRate),
-      rpcCall(CONFIG.mint, SEL.pool)
+      rpcCall(CONFIG.mint, SEL.pool), rpcCall(CONFIG.mint, SEL.open)
     ]);
+    if (open === 1n) {
+      const pill = document.getElementById("cdPill");
+      const pt = document.getElementById("cdPillT");
+      if (pill) pill.classList.add("live");
+      if (pt) pt.textContent = "MINT IS LIVE";
+    }
     document.getElementById("bUnits").textContent = fmt(units);
     document.getElementById("bEpoch").textContent = (epoch + 1n).toString() + " / 11";
     document.getElementById("bRate").textContent = fmt(rate) + " TRIS";
@@ -36,3 +42,14 @@ async function board() {
   } catch (e) { /* board tetap pada nilai awal */ }
 }
 board();
+const OPEN_AT = Date.UTC(2026, 10, 5, 11, 0, 0);
+function tick() {
+  const h = document.getElementById("cdH"), m = document.getElementById("cdM"), s = document.getElementById("cdS");
+  if (!h) return;
+  let d = Math.max(0, OPEN_AT - Date.now());
+  h.textContent = String(Math.floor(d / 3600000)).padStart(2, "0");
+  m.textContent = String(Math.floor(d % 3600000 / 60000)).padStart(2, "0");
+  s.textContent = String(Math.floor(d % 60000 / 1000)).padStart(2, "0");
+}
+tick();
+setInterval(tick, 1000);
