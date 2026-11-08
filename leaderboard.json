@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-08T12:46:18.124Z",
+ "updatedAt": "2026-11-08T14:15:44.285Z",
  "totalWallets": 49,
  "entries": [
   {
@@ -27,6 +27,12 @@
    "claimed": "6000"
   },
   {
+   "wallet": "0xDAee9eF06d9f51254DDdcd592eF53A3BF1836383",
+   "units": 4,
+   "tris": "8000",
+   "claimed": "6000"
+  },
+  {
    "wallet": "0x2e46691bb0756df87fF81680872c857CD0d70ae2",
    "units": 3,
    "tris": "6000",
@@ -40,12 +46,6 @@
   },
   {
    "wallet": "0x9c3657aF5A3091cdd305a04D3A98508105Bf79d9",
-   "units": 3,
-   "tris": "6000",
-   "claimed": "4000"
-  },
-  {
-   "wallet": "0xDAee9eF06d9f51254DDdcd592eF53A3BF1836383",
    "units": 3,
    "tris": "6000",
    "claimed": "4000"
