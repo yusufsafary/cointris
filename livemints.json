@@ -1,6 +1,13 @@
 {
- "updatedAt": "2026-11-08T00:15:32.293Z",
+ "updatedAt": "2026-11-08T03:15:40.716Z",
  "feed": [
+  {
+   "ts": 1794107207,
+   "wallet": "0xF4322d4DcF4E63D73074b23D0321523b4e9487F2",
+   "kind": "free",
+   "units": 1,
+   "tris": "2000"
+  },
   {
    "ts": 1794096308,
    "wallet": "0x2e46691bb0756df87fF81680872c857CD0d70ae2",
@@ -158,13 +165,6 @@
   {
    "ts": 1793882058,
    "wallet": "0xC3D3A6fcd0a3c9d88572Fd2918a93A94a3A6a8a6",
-   "kind": "free",
-   "units": 1,
-   "tris": "2000"
-  },
-  {
-   "ts": 1793879607,
-   "wallet": "0x1D4BE320EA18FB604a02614b95F413f67D63B4EC",
    "kind": "free",
    "units": 1,
    "tris": "2000"
