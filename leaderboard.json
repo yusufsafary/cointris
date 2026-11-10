@@ -1,12 +1,12 @@
 {
- "updatedAt": "2026-11-10T01:15:33.986Z",
+ "updatedAt": "2026-11-10T01:30:38.521Z",
  "totalWallets": 50,
  "entries": [
   {
    "wallet": "0xF4322d4DcF4E63D73074b23D0321523b4e9487F2",
    "units": 6,
    "tris": "12000",
-   "claimed": "8000"
+   "claimed": "10000"
   },
   {
    "wallet": "0x83b0cAD0adBa9Ece28a5300dcAAd879971Cbb84b",
